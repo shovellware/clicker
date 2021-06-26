@@ -1,0 +1,11 @@
+{
+  "name": "clicker",
+  "version": "1.0.0",
+  "description": "A cookie clicker",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
