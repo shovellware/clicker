@@ -1,9 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
-  mode: 'production',
+  entry: './src/index.tsx',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -13,18 +14,20 @@ module.exports = {
       },
     ],
   },
+  devtool: 'source-map',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
-      template: path.resolve(__dirname, './src/template.html'), // template file
+      template: path.resolve(__dirname, './src/index.html'), // template file
       filename: 'index.html', // output file
     }),
+    new CleanWebpackPlugin(),
   ],
 };
