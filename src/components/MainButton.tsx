@@ -1,14 +1,24 @@
+import { Button, TextField } from "@material-ui/core";
 import React from "react";
 
-const MainButton = () => {
-  const printToConsole = () => (
-    console.log("this is how you invoke a method")
-  );
-
-  printToConsole();
+const MainButton = (props) => {
+  const {
+    total,
+    mainClick
+  } = props;
+  
+  const handleClick = () => {
+    mainClick()
+  }
 
   const clickable = (
-    <h2>Button Here</h2>
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => { handleClick() }}
+    >
+      +1
+    </Button>
   );
 
   return clickable;
