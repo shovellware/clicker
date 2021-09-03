@@ -11,17 +11,23 @@ const MainButton = (props) => {
     mainClick()
   }
 
-  const clickable = (
+  const buttonStyles = {
+    width: "30vh", height: "20vh"
+  }
+
+  const buttonElement = (
     <Button
       variant="contained"
       color="primary"
-      onClick={() => { handleClick() }}
+      size="large"
+      style={buttonStyles}
+      onClick={() => handleClick() }
     >
       +1
     </Button>
   );
 
-  return clickable;
+  return buttonElement;
 }
 
 export default MainButton;
