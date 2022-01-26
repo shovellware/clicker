@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   }
 });
 
-function Scoreboard(props) {
+const Scoreboard = (props) => {
   const {
     total
   } = props;

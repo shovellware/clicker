@@ -4,7 +4,7 @@ import { useState } from 'react';
 import MainButton from './MainButton';
 import Scoreboard from './Scoreboard';
 
-function App() {
+const App = () => {
   const [total, setTotal] = useState(0)
 
   const mainClick = () => {
