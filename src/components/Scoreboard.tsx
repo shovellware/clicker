@@ -1,6 +1,8 @@
 import React from "react";
-import { Paper, TextField, Card, Typography } from "@material-ui/core";
+import { Card, Typography } from "@material-ui/core";
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles'
+import { useAppDispatch, useAppSelector } from "../store/rootStore";
+
 
 const useStyles = makeStyles({
   root: {
@@ -8,10 +10,9 @@ const useStyles = makeStyles({
   }
 });
 
-const Scoreboard = (props) => {
-  const {
-    total
-  } = props;
+const Scoreboard = () => {
+  const dispatch = useAppDispatch();
+  const total = useAppSelector((state) => state.baseClick.totalClicks);
 
   const classes = useStyles();
 

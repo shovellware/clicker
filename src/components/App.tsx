@@ -1,16 +1,9 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
-import { useState } from 'react';
 import MainButton from './MainButton';
 import Scoreboard from './Scoreboard';
 
 const App = () => {
-  const [total, setTotal] = useState(0)
-
-  const mainClick = () => {
-    setTotal(total + 1)
-  }
-
   return (
     <Grid
       container
@@ -21,10 +14,10 @@ const App = () => {
       style={{ minHeight: "65vh"}}
     >
       <Grid item>
-        <Scoreboard total={total} />
+        <Scoreboard />
       </Grid>
       <Grid item>
-        <MainButton total={total} mainClick={mainClick} />
+        <MainButton />
       </Grid>
     </Grid>
   )
