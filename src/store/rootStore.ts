@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import  baseClickReducer from './unlocks/baseClick';
+import  baseClickReducer from './upgrades/baseClick';
 
 export const store = configureStore({
   reducer: {

@@ -1,6 +1,6 @@
 import { Button, TextField } from "@material-ui/core";
 import { useAppDispatch, useAppSelector } from "../store/rootStore";
-import { increment } from "../store/unlocks/baseClick";
+import { increment } from "../store/upgrades/baseClick";
 import React from "react";
 
 interface MainButtonProps {
