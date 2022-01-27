@@ -1,14 +1,17 @@
 import { Button, TextField } from "@material-ui/core";
+import { useAppDispatch, useAppSelector } from "../store/rootStore";
+import { increment } from "../store/unlocks/baseClick";
 import React from "react";
 
-const MainButton = (props) => {
-  const {
-    total,
-    mainClick
-  } = props;
+interface MainButtonProps {
+  
+}
+
+const MainButton = (props: MainButtonProps) => {
+  const dispatch = useAppDispatch();
   
   const handleClick = () => {
-    mainClick()
+    dispatch(increment());
   }
 
   const buttonStyles = {
