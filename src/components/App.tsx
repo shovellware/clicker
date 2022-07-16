@@ -1,34 +1,35 @@
-import { Grid, Box } from '@material-ui/core';
 import React from 'react';
 import MainButton from './MainButton';
 import Scoreboard from './Scoreboard';
 import AutoClick from './upgrades/AutoClick';
 import UpgradeBar from './UpgradeBar';
+import { timer } from '../utilities/timer';
+import { IStackStyles, IStackTokens, Stack } from '@fluentui/react';
 
 const App = () => {
+  console.log(timer(6))
+
+  const tokens: IStackTokens = {
+    childrenGap: 10,
+   
+  }
+
+  const myStyles: IStackStyles = {
+      root: 
+        {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "30vh"
+        }
+  }
+
   return (
-    <Box sx={{ flexGrow: 1, paddingTop: '30px', minHeight: '100vh', minWidth: '95vw' }}>
-      <Grid
-        container
-        spacing={8}
-        justifyContent="space-between"
-        alignItems="center"
-        direction="column"
-      >
-
-        <Grid item>
-          <Scoreboard />
-        </Grid>
-        <Grid item>
-          <UpgradeBar />
-        </Grid>
-        <Grid item>
-          <MainButton />
-        </Grid>
-
-      </Grid>
-    </Box>
-  )
+    <Stack styles={myStyles} horizontal tokens={tokens}>
+      <Scoreboard />
+      <UpgradeBar />
+      <MainButton />
+    </Stack>
+  );
 }
 
 export default App;

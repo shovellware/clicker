@@ -30,8 +30,7 @@
     "webpack-dev-server": "^4.1.0"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
+    "@fluentui/react": "^8.81.1",
     "@reduxjs/toolkit": "^1.7.1",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",

@@ -1,8 +1,6 @@
 import React from "react";
-import AddIcon from '@material-ui/icons/Add';
-import { Button, Fab } from "@material-ui/core";
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles'
 import { useAppDispatch, useAppSelector } from '../../store/rootStore';
+import { PrimaryButton, Stack } from "@fluentui/react";
 
 const AutoClick = () => {
   const buttonStyles = {
@@ -13,19 +11,14 @@ const AutoClick = () => {
     console.log('FAB button!!')
   };
 
-  const purchaseAutoClick = (
-    <Fab
-      variant="extended"
-      color="primary"
-      size="small"
-      onClick={() => handleClick() }
-    >
-      <AddIcon />
-      Auto-Click
-    </Fab>
+  const autoCLickUpgradeButton = (
+    <PrimaryButton
+      text="Auto-Click"
+      onClick={handleClick}
+    />
   );
 
-  return purchaseAutoClick;
+  return autoCLickUpgradeButton
 };
 
 export default AutoClick;

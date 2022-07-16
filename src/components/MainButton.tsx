@@ -1,6 +1,6 @@
-import { Button, TextField } from "@material-ui/core";
 import { useAppDispatch, useAppSelector } from "../store/rootStore";
 import { increment } from "../store/upgrades/baseClick";
+import { PrimaryButton } from "@fluentui/react";
 import React from "react";
 
 interface MainButtonProps {
@@ -19,16 +19,17 @@ const MainButton = (props: MainButtonProps) => {
   }
 
   const buttonElement = (
-    <Button
-      variant="contained"
-      color="primary"
-      size="large"
-      style={buttonStyles}
-      onClick={() => handleClick() }
-    >
-      +1
-    </Button>
-  );
+    <PrimaryButton
+      text="+1"
+      onClick={handleClick}
+      styles={{ root: { ...buttonStyles } }}
+
+      // Arrow function over reference like above is preference
+      // The below can be used to implement the handler within JSX
+      // without the need for a function declaration elsewhere
+      // onClick={() => handleClick()}
+    />
+  )
 
   return buttonElement;
 }

@@ -1,17 +1,15 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Stack } from '@fluentui/react'
 
 import AutoClick from './upgrades/AutoClick';
 
 const UpgradeBar = () => {
   return (
-    <div>
-      <Grid direction="row" spacing={2}>
-        <AutoClick />
-        <>Item 2</>
-        <>Item 3</>
-      </Grid>
-    </div>
+    <Stack>
+    <AutoClick />
+    <>Item 2</>
+    <>Item 3</>
+  </Stack>
   );
 }
 
